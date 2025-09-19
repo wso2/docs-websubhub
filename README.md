@@ -1,6 +1,3 @@
-# docs-websubhub
-This repository contains the source code for WSO2 Integrator: WebSubHub documentation.
-
 # WSO2 Integrator: WebSubHub Documentation
 
 [![pages-build-deployment](https://github.com/wso2/docs-websubhub/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/wso2/docs-websubhub/actions/workflows/pages/pages-build-deployment)
@@ -96,7 +93,7 @@ To locally execute the project, ensure that both [Python](https://www.python.org
 
    > **NOTE:**
    >
-   > For a seamless experience and compatibility with the versions of MkDocs and other plugins we utilize, it is recommended to use Python 3.8.x, 3.9.x, or 3.10.x.
+   > For a seamless experience and compatility with the versions of MkDocs and other plugins we utilize, it is recommended to use Python 3.8.x, 3.9.x, or 3.10.x.
 
 3. If you don't have Python installed, download Python from the [official downloads page](https://www.python.org/downloads/) and install.
 
@@ -114,7 +111,7 @@ To locally execute the project, ensure that both [Python](https://www.python.org
 
 - Once you are done, you will have two versions of Python on your machine; python2 and python3.
 
-#### Ubuntu and other versions of Debian Linux
+#### Ubuntu and other versions of Dean Linux
 
 - python3 is pre-installed in these versions, which you can verify with `python3 -V`.
 
