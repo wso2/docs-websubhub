@@ -1,3 +1,24 @@
+{% set tiles = [ [{ "title": "Get Started", "icon": "🚀", "links": [ {"name": "Introduction", "url": "get-started/introduction/"}, {"name": "Quick Start Guide", "url": "get-started/quick-start-guide/"}] }, { "title": "Configurations", "icon": "🛠️ ", "links": [ {"name": "Connecting to an external IdP", "url": "configurations/idp/"}, {"name": "Apache Kafka connection configurations", "url": "configurations/kafka/"} ] } ] ] %}
+
+{% set tiles = [
+    [{
+        "title": "Get Started",
+        "icon": "🚀",
+        "links": [
+            {"name": "Introduction", "url": "get-started/introduction/"}, 
+            {"name": "Quick Start Guide", "url": "get-started/quick-start-guide/"}
+        ]
+    }],
+    [{
+        "title": "Configurations",
+        "icon": "🛠️ ",
+        "links": [
+            {"name": "Connecting to an external IdP", "url": "configurations/idp/"}, 
+            {"name": "Apache Kafka connection configurations", "url": "configurations/kafka/"}
+        ]
+    }]
+] %}
+
 <div class="homePage">
     <div class="description-section">
         <div>
@@ -5,6 +26,38 @@
         </div>
         <div>
             <a href="https://wso2.com/integrator/websubhub/" class="banner-link"></a>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="tiles-container">
+            {% for column in tiles %}
+            <div class="tiles-column">
+                {% for tile in column %}
+                <div class="tile">
+                    <div class="tile-header">
+                        <h3>{{ tile.title }}</h3>
+                        <span class="tile-icon">{{ tile.icon }}</span>
+                    </div>
+                    <ul class="links-list">
+                        {% for link in tile.links %}
+                        <li>
+                            {% if tile.title == "Community & Support" and link.name != "Release Note" %}
+                                <a href="{{ link.url }}" target="_blank" class="link">{{ link.name }}</a>
+                            {% else %}
+                                <a href="{{ base_path }}/{{ link.url }}" class="link">{{ link.name }}</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% if tile.more_btn %}
+                    <div class="button-container">
+                        <a href="{{base_path}}/{{ tile.more_btn.url }}" class="view-all-button">{{ tile.more_btn.name }}</a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
