@@ -75,6 +75,9 @@ nav:
   - Get started:
     - Introduction: get-started/introduction.md
     - Quickstart: get-started/quickstart.md
+  - Configurations:
+    - Connecting to an external IdP: configurations/idp.md
+    - Apache Kafka connection configurations: configurations/kafka.md
 
 # Markdown extensions configuration
 markdown_extensions:
@@ -154,5 +157,5 @@ extra:
     - type: linkedin
       link: https://www.linkedin.com/company/wso2
   # site_version: Uncomment to specify a version
-  # base_path: https://wso2.github.io/docs-websubhub
-  base_path: http://localhost:8000
+  base_path: https://wso2.github.io/docs-websubhub
+  # base_path: http://localhost:8000
