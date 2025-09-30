@@ -1,12 +1,10 @@
-{% set tiles = [ [{ "title": "Get Started", "icon": "🚀", "links": [ {"name": "Introduction", "url": "get-started/introduction/"}, {"name": "Quick Start Guide", "url": "get-started/quick-start-guide/"}] }, { "title": "Configurations", "icon": "🛠️ ", "links": [ {"name": "Connecting to an external IdP", "url": "configurations/idp/"}, {"name": "Apache Kafka connection configurations", "url": "configurations/kafka/"} ] } ] ] %}
-
 {% set tiles = [
     [{
         "title": "Get Started",
         "icon": "🚀",
         "links": [
             {"name": "Introduction", "url": "get-started/introduction/"}, 
-            {"name": "Quick Start Guide", "url": "get-started/quick-start-guide/"}
+            {"name": "Quick Start Guide", "url": "get-started/quickstart/"}
         ]
     }],
     [{
