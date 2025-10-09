@@ -2,20 +2,20 @@
 
 ## Overview
 
-As outlined in the [Introduction](../get-started/introduction.md), **WSO2 Integrator: WebSubHub** supports using a message broker of choice as its persistence storage. Among the popular options, Apache Kafka is widely used. This guide explains the Apache Kafka–related connection configuration options available in **WSO2 Integrator: WebSubHub**.
+As outlined in the [Introduction](../get-started/introduction.md), WSO2 Integrator: WebSubHub supports using a message broker of choice as its persistence storage. Among the popular options, <a href = "https://kafka.apache.org/">Apache Kafka</a> is widely used. This guide explains the Apache Kafka–related connection configuration options available in WSO2 Integrator: WebSubHub.
 
 ## Basic configurations
 
 ### Connection configurations
 
-To update the basic Apache Kafka connection settings in **WSO2 WebSubHub**, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
+To update the basic Apache Kafka connection settings in WSO2 WebSubHub, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.config.kafka.connection]
     bootstrapServers = <kafka-bootstrap-nodes>
 ```
 
-To update the basic Apache Kafka connection settings in **WSO2 WebSubHub Consolidator**, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
+To update the basic Apache Kafka connection settings in WSO2 WebSubHub Consolidator, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.consolidator.config.kafka.connection]
@@ -24,11 +24,11 @@ To update the basic Apache Kafka connection settings in **WSO2 WebSubHub Consoli
 
 **Parameters**
 
-* *bootstrapServers* - A comma-separated list of Kafka bootstrap nodes (eg: “localhost:9092,localhost:9093”)
+* `bootstrapServers` - A comma-separated list of Kafka bootstrap nodes (e.g., “localhost:9092,localhost:9093”)
 
 ### Consumer configurations
 
-To update the Apache Kafka consumer settings in **WSO2 WebSubHub**, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
+To update the Apache Kafka consumer settings in WSO2 WebSubHub, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.config.kafka.consumer]
@@ -37,7 +37,7 @@ To update the Apache Kafka consumer settings in **WSO2 WebSubHub**, update the f
     gracefulClosePeriod = <graceful-close-period-in-seconds>
 ```
 
-To update the Apache Kafka consumer settings in **WSO2 WebSubHub Consolidator**, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
+To update the Apache Kafka consumer settings in WSO2 WebSubHub Consolidator, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.consolidator.config.kafka.consumer]
@@ -48,17 +48,17 @@ To update the Apache Kafka consumer settings in **WSO2 WebSubHub Consolidator**,
 
 **Parameters**
 
-* *maxPollRecords* - Maximum number of records returned in a single poll action from Kafka (eg: 50)
-* *pollingInterval* - Interval (in seconds) between consecutive poll requests (eg: 10.0)
-* *gracefulClosePeriod* - The time period (in seconds) gracefully shutdown the consumer (eg: 5.0)
+* `maxPollRecords` - Maximum number of records returned in a single poll action from Kafka (e.g., 50)
+* `pollingInterval` - Interval (in seconds) between consecutive poll requests (e.g., 10.0)
+* `gracefulClosePeriod` - The time period (in seconds) gracefully shutdown the consumer (e.g., 5.0)
 
-## Advance configurations
+## Advanced configurations
 
-### Configuring SSL communication
+### Configure SSL communication
 
-Apache Kafka allows clients to use SSL encryption of traffic as well as authentication. **WSO2 Integrator: WebSubHub** can be configured to use SSL when communicating with Apache Kafka. Please follow the <a href = "https://kafka.apache.org/documentation/#security_ssl">official documentation</a> to understand how to configure SSL encryption of traffic in the broker level.
+Apache Kafka allows clients to use SSL encryption of traffic as well as authentication. WSO2 Integrator: WebSubHub can be configured to use SSL when communicating with Apache Kafka. Please follow the <a href = "https://kafka.apache.org/documentation/#security_ssl">official documentation</a> to understand how to configure SSL encryption of traffic in the broker level.
 
-To set up SSL encryption of traffic for **WSO2 WebSubHub**, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
+To set up SSL encryption of traffic for WSO2 WebSubHub, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.config.kafka.connection]
@@ -77,7 +77,7 @@ To set up SSL encryption of traffic for **WSO2 WebSubHub**, update the following
     protocol.name = "SSL"
 ```
 
-To set up SSL encryption of traffic for **WSO2 WebSubHub Consolidator**, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
+To set up SSL encryption of traffic for WSO2 WebSubHub Consolidator, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.consolidator.config.kafka.connection]
@@ -98,22 +98,22 @@ To set up SSL encryption of traffic for **WSO2 WebSubHub Consolidator**, update 
 
 **Kafka Connection Parameters**
 
-* *securityProtocol* - Protocol used to communicate with Kafka brokers. Supported values are `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, and `SASL_SSL`. Since this setup requires a secure connection, use `SSL`.
+* `securityProtocol` - Protocol used to communicate with Kafka brokers. Supported values are `PLAINTEXT`, `SSL`, `SASL_PLAINTEXT`, and `SASL_SSL`. Since this setup requires a secure connection, use `SSL`.
 
 **Secure Socket Parameters**
 
-* *cert* - Path to the Kafka broker certificate file (e.g., /home/user/broker.crt)
-* *cert.path* - Path to the Kafka client truststore file (e.g., /home/user/client.truststore.jks).
-* *cert.password* - Password to access the truststore file.
-* *protocol.name* - The relevant security protocol.
+* `cert` - Path to the Kafka broker certificate file (e.g., /home/user/broker.crt)
+* `cert.path` - Path to the Kafka client truststore file (e.g., /home/user/client.truststore.jks).
+* `cert.password` - Password to access the truststore file.
+* `protocol.name` - The relevant security protocol.
 
 **Note: Choose either the truststore-based approach or the certificate-based approach, depending on your setup. Ensure that only one approach is configured at a time.**
 
-### Configuring SSL based authentication
+### Configure SSL based authentication
 
-In addition to encrypting traffic, Apache Kafka supports client authentication over SSL, ensuring that only trusted clients can connect to the cluster. **WSO2 Integrator: WebSubHub** can be configured to use SSL certificates for authentication when connecting to Kafka.
+In addition to encrypting traffic, Apache Kafka supports client authentication over SSL, ensuring that only trusted clients can connect to the cluster. WSO2 Integrator: WebSubHub can be configured to use SSL certificates for authentication when connecting to Kafka.
 
-To set up SSL based authentication for **WSO2 WebSubHub**, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
+To set up SSL based authentication for WSO2 WebSubHub, update the following configuration section in the `websubhub-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.config.kafka.connection]
@@ -128,7 +128,7 @@ To set up SSL based authentication for **WSO2 WebSubHub**, update the following 
     protocol.name = "SSL"
 ```
 
-To set up SSL based authentication for **WSO2 WebSubHub Consolidator**, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
+To set up SSL based authentication for WSO2 WebSubHub Consolidator, update the following configuration section in the `websubhub-consolidator-<VERSION>/conf/Config.toml` file.
 
 ```toml
     [websubhub.consolidator.config.kafka.connection]
@@ -145,6 +145,6 @@ To set up SSL based authentication for **WSO2 WebSubHub Consolidator**, update t
 
 **Secure Socket Parameters**
 
-* *key.keyStore.path* - Path to the Kafka client truststore file (e.g., /home/user/client.keystore.jks).
-* *key.keyStore.password* - Password to access the keystore file.
-* *key.keyPassword* (optional) - Optional configuration to set the password for the key.
+* `key.keyStore.path` - Path to the Kafka client truststore file (e.g., /home/user/client.keystore.jks).
+* `key.keyStore.password` - Password to access the keystore file.
+* `key.keyPassword` (optional) - Optional configuration to set the password for the key.
