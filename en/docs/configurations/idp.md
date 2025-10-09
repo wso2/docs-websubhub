@@ -1,4 +1,4 @@
-# Connecting to an external IdP
+# Connect to an external IdP
 
 ## Step 1: Configure the IdP
 

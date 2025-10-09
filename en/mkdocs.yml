@@ -76,8 +76,8 @@ nav:
     - Introduction: get-started/introduction.md
     - Quickstart: get-started/quickstart.md
   - Configurations:
-    - Connecting to an external IdP: configurations/idp.md
-    - Apache Kafka connection configurations: configurations/kafka.md
+    - Connect to an external IdP: configurations/idp.md
+    - Connect to Apache Kafka: configurations/kafka.md
 
 # Markdown extensions configuration
 markdown_extensions:

@@ -1,4 +1,4 @@
-# Apache Kafka connection configurations
+# Connect to Apache Kafka
 
 ## Overview
 
