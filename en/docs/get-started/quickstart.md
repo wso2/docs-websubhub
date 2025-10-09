@@ -1,4 +1,4 @@
-# Quickstart
+# Quick Start Guide
 
 ## Step 1: Set up the message broker
 

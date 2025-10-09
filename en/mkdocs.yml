@@ -74,9 +74,9 @@ nav:
   - Home: index.md
   - Get started:
     - Introduction: get-started/introduction.md
-    - Quickstart: get-started/quickstart.md
+    - Quick Start Guide: get-started/quickstart.md
   - Configurations:
-    - Connect to an external IdP: configurations/idp.md
+    - Connect to an External IdP: configurations/idp.md
     - Connect to Apache Kafka: configurations/kafka.md
 
 # Markdown extensions configuration
