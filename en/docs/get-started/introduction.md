@@ -19,13 +19,13 @@ WebSub enables real-time event streaming over HTTP(S) and can be applied across 
 
 ## What is WSO2 Integrator: WebSubHub ?
 
-**WSO2 Integrator: WebSubHub** is a <a href = "https://www.w3.org/TR/websub/">WebSub</a> compliant hub implementation written in <a href = "https://ballerina.io/">Ballerina programming language</a>. It enables organizations to adopt event-driven architectures by supporting publish-subscribe communication over HTTP(S). **WSO2 Integrator: WebSubHub** can be configured with the message broker of your choice as its persistence layer, making it ideal for scalable, real-time event distribution across services, applications, and systems.
+**WSO2 Integrator: WebSubHub** is a <a href = "https://www.w3.org/TR/websub/">WebSub</a> compliant hub implementation written in <a href = "https://ballerina.io/">Ballerina programming language</a>. It enables organizations to adopt event-driven architectures by supporting publish-subscribe communication over HTTP(S). WSO2 Integrator: WebSubHub can be configured with the message broker of your choice as its persistence layer, making it ideal for scalable, real-time event distribution across services, applications, and systems.
 
-### How does WSO2 Integrator: WebSubHub work in a nutshell ?
+### How does it work ?
 
-The **WSO2 Integrator: WebSubHub** distribution is composed of two main components: the WebSubHub and the Consolidator. The WebSubHub is a WebSub-compliant hub implementation that manages topics, processes subscription requests, and delivers content updates to subscribers. The Consolidator is responsible for managing the overall system state.
+The WSO2 Integrator: WebSubHub distribution is composed of two main components: the WebSubHub and the Consolidator. The WebSubHub is a WebSub-compliant hub implementation that manages topics, processes subscription requests, and delivers content updates to subscribers. The Consolidator is responsible for managing the overall system state.
 
-The **WSO2 Integrator: WebSubHub** system uses a message broker as its persistence layer. Messages related to topics, as well as system state information such as registered topics and subscriptions, are stored within broker topics. This approach ensures fault tolerance, scalability, and a clean event-driven architecture.
+The WSO2 Integrator: WebSubHub system uses a message broker as its persistence layer. Messages related to topics, as well as system state information such as registered topics and subscriptions, are stored within broker topics. This approach ensures fault tolerance, scalability, and a clean event-driven architecture.
 
 <a href="{{base_path}}/assets/img/get-started/introduction/websubhub-architecture.png"><img src="{{base_path}}/assets/img/get-started/introduction/websubhub-architecture.png" alt="WSO2 Integrator: WebSubHub" width="75%" style="padding-top: 20px" ></a>
 
@@ -51,7 +51,7 @@ A client or application that wants to receive real-time updates about a topic. I
 
 The intermediary that manages subscriptions and distributes messages. Publishers notify the hub of updates, and the hub pushes these updates to all registered subscribers.
 
-## WSO2 Integrator: WebSubHub features
+## Features
 
 * At-least-once message delivery guarantee for subscribers.
 * Automatic retries for message delivery in case of transient subscriber endpoint failures.
@@ -60,4 +60,4 @@ The intermediary that manages subscriptions and distributes messages. Publishers
 
 ## Where to from now ?
 
-To get hands-on experience with **WSO2 Integrator: WebSubHub**, follow the [Quickstart](quickstart.md).
+To get hands-on experience with WSO2 Integrator: WebSubHub, follow the [Quick Start Guide](quickstart.md).
