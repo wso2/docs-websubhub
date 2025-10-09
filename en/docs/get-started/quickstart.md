@@ -2,13 +2,13 @@
 
 ## Step 1: Set up the message broker
 
-As discussed in the [Introduction](introduction.md) section **WSO2 Integrator: WebSubHub** uses a message broker as its persistence layer. As per this guide, we will use Apache Kafka as the message broker.
+As discussed in the [Introduction](introduction.md) section WSO2 Integrator: WebSubHub uses a message broker as its persistence layer. As per this guide, we will use <a href = "https://kafka.apache.org/">Apache Kafka</a> as the message broker.
 
 * Download Apache Kafka from the <a href = "https://kafka.apache.org/downloads">official site</a> or run it as a Docker container. For more information, please refer to the <a href = "https://kafka.apache.org/quickstart">official documentation</a>.
 
 ## Step 2: Get WSO2 Integrator: WebSubHub
 
-<a href = "https://github.com/wso2/product-integrator-websubhub/releases">Download</a> the latest version of **WSO2 Integrator: WebSubHub** distribution and extract it.
+<a href = "https://github.com/wso2/product-integrator-websubhub/releases">Download</a> the latest version of WSO2 Integrator: WebSubHub distribution and extract it.
 
 ```sh
     $ unzip wso2websubhub-distribution-1.0.0.zip
@@ -27,7 +27,7 @@ Go into the `wso2websubhub-consolidator-1.0.0` directory.
     $ cd wso2websubhub-consolidator-1.0.0
 ```
 
-Update the configurations related to the **WebSubHub Consolidator** server port in the `conf/Config.toml`.
+Update the configurations related to the WebSubHub Consolidator server port in the `conf/Config.toml`.
 
 ```toml
     [websubhub.consolidator.config.server]
@@ -49,7 +49,7 @@ Go into the `wso2websubhub-1.0.0` directory.
     $ cd wso2websubhub-1.0.0
 ```
 
-Update the configurations related to the **WebSubHub** server port in the `conf/Config.toml`.
+Update the configurations related to the WebSubHub server port in the `conf/Config.toml`.
 
 ```toml
     [websubhub.config.server]
@@ -120,7 +120,7 @@ Copy the unique URL.
 
 <a href="{{base_path}}/assets/img/get-started/quickstart/webhook-subscriber-url.png"><img src="{{base_path}}/assets/img/get-started/quickstart/webhook-subscriber-url.png" alt="Copy unique URL" width="60%" style="padding-top: 20px" ></a>
 
-URL-encode the copied unique URL and refer to it as **encoded-callback-url**.
+URL-encode the copied unique URL and refer to it as `encoded-callback-url`.
 
 Initiate the subscription call using the following cURL.
 
@@ -141,8 +141,9 @@ Publish the content to the relevant topic in WSO2 WebSubHub, and you can view th
 
 ## Congratulations
 
-You have successfully completed **WSO2 Integrator: WebSubHub** quickstart. 
+You have successfully completed `WSO2 Integrator: WebSubHub` quick start guide. 
 
-To learn more about it, we suggest following the next steps:
+See the **Configurations** section for more information on:
 
-* Go through the Configurations section for more details on Apache Kafka related settings of the **WSO2 Integrator: WebSubHub**.
+* [Configuring an external IdP](../configurations/idp.md) for authentication and authorization
+* In-depth [Apache Kafka configuration](../configurations/kafka.md) details
