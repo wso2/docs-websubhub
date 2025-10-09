@@ -139,11 +139,11 @@ Publish the content to the relevant topic in WSO2 WebSubHub, and you can view th
 
 <a href="{{base_path}}/assets/img/get-started/quickstart/webhook-subscriber-content-delivery.png"><img src="{{base_path}}/assets/img/get-started/quickstart/webhook-subscriber-content-delivery.png" alt="Copy unique URL" width="60%" style="padding-top: 20px" ></a>
 
-## Congratulations
+<h2 id="congratulations" class="no-toc">Congratulations</h2>
 
 You have successfully completed `WSO2 Integrator: WebSubHub` quick start guide. 
 
 See the **Configurations** section for more information on:
 
 * [Configuring an external IdP](../configurations/idp.md) for authentication and authorization
-* In-depth [Apache Kafka configuration](../configurations/kafka.md) details
+* Comprehensive Guide to [Apache Kafka configurations](../configurations/kafka.md)
