@@ -1,10 +1,12 @@
 # Connect to an external IdP
 
-## Step 1: Configure the Identity Provider (IdP)
+WSO2 Integrator: WebSubHub can be configured to connect with an external Identity Provider (IdP) to enable authentication and authorization for its operations.
 
-We will be using WSO2 Identity Server (WSO2 IS) as the IdP, and at the time of writing this document, the version in use is WSO2 IS 7.1.
+This guide demonstrates how to integrate WSO2 Integrator: WebSubHub with WSO2 Identity Server (WSO2 IS) as the IdP. At the time of writing, the version used is WSO2 IS v7.1.
 
 Refer to the WSO2 Identity Server v7.1 <a href = "https://is.docs.wso2.com/en/latest/get-started/quick-set-up/">official documentation</a> to set up the server locally, then log in to the Identity Server Management Console.
+
+## Step 1: Configure the Identity Provider (IdP)
 
 1. First navigate to the **API Resources** section and add a new API resource.
 
