@@ -72,6 +72,12 @@ strict: false # Set to true to break the build if there are warnings
 # Navigation structure
 nav:
   - Home: index.md
+  - Get started:
+    - Introduction: get-started/introduction.md
+    - Quick Start Guide: get-started/quickstart.md
+  - Configurations:
+    - Connect to an External IdP: configurations/idp.md
+    - Connect to Apache Kafka: configurations/kafka.md
 
 # Markdown extensions configuration
 markdown_extensions:
